@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人生只有900个月</title>
+    <link rel="stylesheet" href="https://odyv1vaf4.qnssl.com/3.3.0/css/bootstrap.min.css">
+    <script src="https://odyv1vaf4.qnssl.com/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://o8tfjxaey.qnssl.com/js/jquery-3.1.0.min.js"></script>
+    <script src="https://odyv1vaf4.qnssl.com/3.3.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+
+        body {
+            font-family: "Microsoft YaHei UI", serif;
+            font-size: 16px;
+            background-image: url("image/ignasi_pattern_s.png");
+        }
+
+        #main {
+            width: 100vh;
+            height: 100vh;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 20vh;
+        }
+
+        #birth {
+            margin: 0 auto;
+            text-align: center;
+            width: 30vh;
+        }
+
+        #row {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<div id="main">
+    <p>普通人的一生大约只有 900 个月</p>
+    <p>现在距离你出生已经经过了<span id="s1"> </span>秒，你的900个月还剩下<span id="s2"></span>秒</p>
+    <input type="date" class="form-control" value="1997-01-21" id="birth">
+    <p>你的人生已经走过了<span id="left"> </span>%</p>
+    <canvas width="300px" height="300px" id="myLife">
+    </canvas>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+
+</html>
