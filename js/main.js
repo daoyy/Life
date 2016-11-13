@@ -3,8 +3,19 @@
  */
 var newDate = new Date();
 var myDate = new Date($("#birth").val());
+
+function ha1() {
+    $("#ha").animate({bottom:'-50px'});
+    setInterval("ha2();", 2000);
+}
+function ha2() {
+    $("#ha").animate({bottom:'-100px'});
+    setInterval("ha1();", 10000);
+}
+
 $(document).ready(function () {
     canvas();
+    ha2();
 });
 $("#birth").keyup(function () {//输入框改变事件
     Clear_canvas();
@@ -83,6 +94,5 @@ function canvas() {
         }
     }
     //完成描绘
-
     ctx.stroke();
 }
