@@ -3,18 +3,8 @@
  */
 var newDate = new Date();
 var myDate = new Date($("#birth").val());
-
-function ha1() {
-    $("#ha").animate({bottom:'-50px'});
-    setInterval("ha2();", 2000);
-}
-function ha2() {
-    $("#ha").animate({bottom:'-100px'});
-}
-
 $(document).ready(function () {
     canvas();
-    ha2();
 });
 $("#birth").keyup(function () {//输入框改变事件
     Clear_canvas();
@@ -42,7 +32,7 @@ function life() {
     $("#s1").text((sum / 1000).toFixed(1));
     $("#s2").text(((2366820000000 / 1000) - (sum / 1000)).toFixed(1));
     var day = parseInt(sum / 1000 / 60 / 60 / 24);
-    var year = parseInt(day/365);
+    var year = parseInt(day / 365);
     var m = day % 365;
     var month = parseInt(m / 30);
     var schedule = (year * 12) + month;
