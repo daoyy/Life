@@ -10,7 +10,6 @@ function ha1() {
 }
 function ha2() {
     $("#ha").animate({bottom:'-100px'});
-    setInterval("ha1();", 10000);
 }
 
 $(document).ready(function () {
