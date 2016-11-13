@@ -31,7 +31,12 @@ function life() {
     $("#left").text(remain);
     $("#s1").text((sum / 1000).toFixed(1));
     $("#s2").text(((2366820000000 / 1000) - (sum / 1000)).toFixed(1));
-    return remain;
+    var day = parseInt(sum / 1000 / 60 / 60 / 24);
+    var year = parseInt(day/365);
+    var m = day % 365;
+    var month = parseInt(m / 30);
+    var schedule = (year * 12) + month;
+    return schedule;
 
 }
 function canvas() {
@@ -60,14 +65,15 @@ function canvas() {
             ctx.lineTo(canvas.width, y);
         }
     }
-    var index = 0;
-    for (var row = 0; row <= grid_rows; row++) {
-        for (var col = 0; col <= grid_cols; col++) {
+    //画格子
+    var index = 1;
+    for (var row = 0; row < grid_rows; row++) {
+        for (var col = 0; col < grid_cols; col++) {
             x = (300 / grid_cols) * col;
             y = (300 / grid_rows) * row;
             ctx.strokeStyle = "#333333";
-            if (index / 900 > life() / 100) {
-                ctx.rect(x, y, 10, 10);
+            if (index > life()) {
+                // ctx.rect(x, y, 10, 10);
             }
             else {
                 ctx.fillStyle = "red";
